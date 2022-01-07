@@ -1,0 +1,300 @@
+{
+	"info": {
+		"_postman_id": "2220be17-8203-404f-9fa0-1d333e9af49c",
+		"name": "symfony_api",
+		"description": "REST API | dogukandemir.net",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"dogukan\",\r\n    \"password\":\"123\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8101/api/login_check",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8101",
+					"path": [
+						"api",
+						"login_check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"dogukan\",\r\n    \"password\":\"123\",\r\n    \"email\":\"dogu@hotmail.com\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8101/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8101",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NDE1NTA1NzYsImV4cCI6MTY0MTU1NDE3Niwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoiZG9ndWthbiJ9.AMBFOP-CsGankm4PxwN4x84s2hSIWMRoCssg7sBjes7UbJ7Po4M9qtxW-tJFfc63NAkF0hFxvZ4tXKk25oZ60dvbqYq9aPLphp2ltQXncvIK8jquDdqqLM4MWdrk0JZBRC8j2DtCNAyENorFfkPpixazuES-A16P5UHeQusTmxPgoxRargNevFbHVJ4rVVciu8d1bWm-zB31NpWUFCkYi2TbVKZR4HWUiUHqvWJ2cTHf4ioQr5gXAXiq6_ZTKIydWRJ8tA4O2ri-snlBEbSIkMljO1l8Vgfb_X9syeobTZcDXXzPucThzW_lN8DW4TIhV0D5RwghsFNICsVU5YwD3w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8101/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8101",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NDE1NTA1NzYsImV4cCI6MTY0MTU1NDE3Niwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoiZG9ndWthbiJ9.AMBFOP-CsGankm4PxwN4x84s2hSIWMRoCssg7sBjes7UbJ7Po4M9qtxW-tJFfc63NAkF0hFxvZ4tXKk25oZ60dvbqYq9aPLphp2ltQXncvIK8jquDdqqLM4MWdrk0JZBRC8j2DtCNAyENorFfkPpixazuES-A16P5UHeQusTmxPgoxRargNevFbHVJ4rVVciu8d1bWm-zB31NpWUFCkYi2TbVKZR4HWUiUHqvWJ2cTHf4ioQr5gXAXiq6_ZTKIydWRJ8tA4O2ri-snlBEbSIkMljO1l8Vgfb_X9syeobTZcDXXzPucThzW_lN8DW4TIhV0D5RwghsFNICsVU5YwD3w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8101/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8101",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Product",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2NDE1NTA1NzYsImV4cCI6MTY0MTU1NDE3Niwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoiZG9ndWthbiJ9.AMBFOP-CsGankm4PxwN4x84s2hSIWMRoCssg7sBjes7UbJ7Po4M9qtxW-tJFfc63NAkF0hFxvZ4tXKk25oZ60dvbqYq9aPLphp2ltQXncvIK8jquDdqqLM4MWdrk0JZBRC8j2DtCNAyENorFfkPpixazuES-A16P5UHeQusTmxPgoxRargNevFbHVJ4rVVciu8d1bWm-zB31NpWUFCkYi2TbVKZR4HWUiUHqvWJ2cTHf4ioQr5gXAXiq6_ZTKIydWRJ8tA4O2ri-snlBEbSIkMljO1l8Vgfb_X9syeobTZcDXXzPucThzW_lN8DW4TIhV0D5RwghsFNICsVU5YwD3w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"product 1\",\r\n    \"price\":\"15\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8101/api/product/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8101",
+					"path": [
+						"api",
+						"product",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8101/api/orders/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8101",
+					"path": [
+						"api",
+						"orders",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8101/api/orders/19",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8101",
+					"path": [
+						"api",
+						"orders",
+						"19"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Order",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8101/api/orders/18",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8101",
+					"path": [
+						"api",
+						"orders",
+						"18"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Order",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productid\":\"1\",\r\n    \"userid\":\"6\",\r\n    \"quantity\":\"20\",\r\n    \"address\":\"evimsdain adresi şuan\",\r\n    \"shippingdate\":\"0\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8101/api/orders/19",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8101",
+					"path": [
+						"api",
+						"orders",
+						"19"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "saf",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productid\":\"1\",\r\n    \"userid\":\"5\",\r\n    \"quantity\":\"10\",\r\n    \"address\":\"evimin adresi\",\r\n    \"shippingdate\":\"50\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8101/api/order/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8101",
+					"path": [
+						"api",
+						"order",
+						"new"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
