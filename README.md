@@ -4,7 +4,6 @@
  
  
 # Preparation
-- Extract files
 - Compose docker
 - Compose symfony
   - Create new symfony project with 'codebase' name
@@ -13,16 +12,14 @@
   - Install require symfony packages 
   - Generate jwt key
 - Move files
-- Change giving files
+- Database
 - Migration
 - Done 
 
 # The final folder structure without symfony
 ![Last Tree](https://dogukandemir.net/img/symfony.png)
 ## Compose docker
- Find and extract the folder named 'docker'  in downloaded main folder
  Open in terminal to be established location and execute the code below 
- 
  ```bash
 docker-compose up -d
 ```
@@ -55,9 +52,38 @@ Finally we need the jwt key
 ```bash
  php bin/console lexik:jwt:generate-keypair
 ```
-# Move files
- After symfony installation find the  folder named 'symfony'  in downloaded main folder 
- 
- 
+## Move files
+ After symfony installation find and move named 'codebase' the folder named 'symfony files' in downloaded main folder
+ Change it all files.
 
+## Database
+  After change the the folder named 'codebase' we need the database. Find the codebase/.env file. Inside the .env file find the start DATABASE_URL= line and change this
+ ```.env
+  DATABASE_URL="mysql://api_user:api_password@localhost:33016/symfony_api?serverVersion=mariadb-10.4.11&charset=utf8"
+ ```
+## Migration
+ Last process created table into the database. Execute the code below. If raise error ignore it
+ ```bash
+ php bin/console make:migration
+ ```
+ ```bash
+php bin/console doctrine:migrations:migrate
+ ```
+## Done
+ Open postman and import the file named 'symfony_api.postman_collection.json' 
+ **All requests need the Bearer Token (exclude register and login request)**
+ 
+# Example Postman Request
+ - Register
+   - ![Register](https://dogukandemir.net/img/postman_register.png)
+   
+ - Login
+   - ![Login](https://dogukandemir.net/img/postman_login.png)
+ 
+ - With Token Add
+   - ![Login](https://dogukandemir.net/img/postman_product.png)
+   
+ - Without Token Add
+   - ![Login](https://dogukandemir.net/img/postman_without.png)
+ 
  
